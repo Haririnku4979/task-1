@@ -1,8 +1,51 @@
- Examine sender’s email address for spoofing	The “From” field claims to be from “Customer Support” at a bank. But the email is actually from support@bank‑secure123.com. That domain is suspicious because it isn't the bank’s main domain (e.g. bank.com). The attacker is using a domain that looks somewhat related (“bank‑secure123”) to make it seem credible, but it's not legitimate.
- Check email headers for discrepancies (using a header analyzer tool)	If we viewed the full headers: we might see that “Return‑Path” or “Reply‑To” is different from “From”, or that the sending mail server’s IP doesn’t match the bank’s legitimate servers. Perhaps the SPF or DKIM records fail (i.e. authentication checks). These are red flags. (In a real sample you’d paste the header into a header analyzer or an SPF / DKIM checker to see.)
- Identify suspicious links or attachments	There is a link: http://bank‑secure123.verify‑account.com/login
- It looks like it's related to “bank”, “secure”, “verify account”, etc. But note the domain: “verify‑account.com” is the root domain, with “bank‑secure123” as a subdomain. That’s misleading. There are no attachments here, which is typical — many phishes go via link rather than attachment.
- Look for urgent or threatening language in the email body	Yes: “Your Bank Account Has Been Suspended!”, “temporarily suspended access”, “Failure to act within 24 hours will result in permanent suspension.” This kind of highly time‑sensitive threat is common in phishing.
-Note any mismatched URLs (hover to see real link)	The link text says “Verify your account now”, which implies a link to the bank. But hovering over it reveals it goes to something like “bank‑secure123.verify‑account.com/login”, which is not the bank’s real domain. That mismatch is a key red flag.
- Verify presence of spelling or grammar errors	In this sample: grammar is fairly good, a few awkward phrases (“temporarily suspended access”, “for your security, we have temporarily suspended access” is okay though a bit formal). But phishers often include mistakes, or slightly off phrasing. The sample is mild, but if we saw something like “verfiy your identity”, “act immediatly”, etc., that would be bad.
- (Actually your list numbered 8 earlier) Summarize phishing traits found in the email.	Combined from above: spoofed sender address; suspicious/mismatched domain in links; urgent/threatening language; pressure to act quickly; possible failures or spoofing in headers; possibility of authentication failures; generic greeting (“Dear Valued Customer”) rather than personalised name.
+Objective: Identify and Handle Suspicious Emails in Cybersecurity
+Introduction
+
+Cybercriminals often use deceptive emails to trick users into clicking malicious links or providing sensitive information. One of the most common tactics involves sending emails from addresses that closely resemble legitimate domains (e.g., faceebook.com instead of facebook.com).
+
+As cybersecurity professionals, it is crucial to educate and guide users in identifying and responding to such threats.
+
+Common Tactics Used in Suspicious Emails
+
+Email Spoofing: Using addresses that look very similar to legitimate ones (e.g., faceebook.com, gmai1.com).
+
+Urgent Messages: Creating a false sense of urgency (e.g., "Your account will be deactivated today!").
+
+Phishing Links: Including links asking you to "verify your account" or "reset your password."
+
+Security Instructions for Users
+✅ 1. Do Not Click on Suspicious Links
+
+Avoid clicking any links in emails that seem suspicious or unexpected.
+
+Hover over the link to preview the actual URL before clicking.
+
+✅ 2. Carefully Check the Sender's Email Address
+
+Look for small changes in the spelling of known domains.
+
+Be cautious if the domain looks off, even by a single character.
+
+✅ 3. Change Your Passwords Regularly
+
+Use strong, unique passwords for each account.
+
+Update passwords periodically and especially after any suspicious activity.
+
+✅ 4. Use Email Filters and Security Tools
+
+Enable spam filters and phishing detection in your email client.
+
+Use antivirus and email security tools to detect potential threats.
+
+✅ 5. Report Suspicious Activity Immediately
+
+If you suspect a phishing attempt or have clicked on a suspicious link:
+
+Do not provide any information.
+
+Inform your Cybersecurity or IT team immediately.
+
+Conclusion
+
+Staying vigilant is key to defending against phishing attacks and other email-based threats. Always verify before you click, and when in doubt, report it.
